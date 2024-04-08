@@ -1,7 +1,7 @@
 import React, { useMemo, useRef, useState, useEffect } from "react";
 import { View, StyleSheet, Text, TextInput, Image } from "react-native";
 import MapView from "react-native-maps";
-import MarkerComponentCallout from "./src/components/marker";
+import MarkerComponentCallout from "./src/components/map/marker";
 import MapViewStyle from "./src/utils/custommap.json";
 import { StatusBar } from "expo-status-bar";
 import BottomSheet from "@gorhom/bottom-sheet";
