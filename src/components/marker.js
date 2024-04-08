@@ -1,5 +1,5 @@
 import React from "react";
-import IstanbulData from "./places.json";
+import IstanbulData from "../apis/places.json";
 import { Marker } from "react-native-maps";
 import { StyleSheet } from "react-native";
 

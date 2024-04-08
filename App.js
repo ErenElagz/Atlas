@@ -1,12 +1,12 @@
 import React, { useMemo, useRef, useState, useEffect } from "react";
 import { View, StyleSheet, Text, TextInput, Image } from "react-native";
 import MapView from "react-native-maps";
-import MarkerComponentCallout from "./marker";
-import MapViewStyle from "./custommap.json";
+import MarkerComponentCallout from "./src/components/marker";
+import MapViewStyle from "./src/utils/custommap.json";
 import { StatusBar } from "expo-status-bar";
 import BottomSheet from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import Divider from "./divider";
+
 export default function App() {
     const BottomSheetRef = useRef(null);
     const snapPoints = useMemo(() => ["6", "40", "80"], []);
@@ -67,107 +67,6 @@ export default function App() {
                         <Text style={styles.placeDescription}>
                             {dataFromChild["description"]}
                         </Text>
-
-                        <View
-                            style={{
-                                backgroundColor: "#fafafa",
-                                borderRadius: 8,
-                                paddingHorizontal: 16,
-                                paddingVertical: 24,
-                                gap: 12
-                            }}
-                        >
-                            <Text style={{ fontSize: 16, fontWeight: "800" }}>
-                                Reviews (3)
-                            </Text>
-                            <View>
-                                <View>
-                                    <View
-                                        style={{
-                                            flexDirection: "row",
-                                            alignItems: "center",
-                                            justifyContent: "space-between"
-                                        }}
-                                    >
-                                        <Text
-                                            style={{
-                                                fontSize: 14,
-                                                fontWeight: "700"
-                                            }}
-                                        >
-                                            ErenElagz
-                                        </Text>
-                                        <Text
-                                            style={{
-                                                fontSize: 12,
-                                                fontWeight: "600"
-                                            }}
-                                        >
-                                            21/12/23
-                                        </Text>
-                                    </View>
-                                    <Text>Very veri nice place. 👌</Text>
-                                </View>
-                                <Divider />
-                                <View>
-                                    <View
-                                        style={{
-                                            flexDirection: "row",
-                                            alignItems: "center",
-                                            justifyContent: "space-between"
-                                        }}
-                                    >
-                                        <Text
-                                            style={{
-                                                fontSize: 14,
-                                                fontWeight: "700"
-                                            }}
-                                        >
-                                            ErenElagz
-                                        </Text>
-                                        <Text
-                                            style={{
-                                                fontSize: 12,
-                                                fontWeight: "600",
-                                                margin: 4
-                                            }}
-                                        >
-                                            21/12/23
-                                        </Text>
-                                    </View>
-                                    <Text>Very nice place. 😍</Text>
-                                </View>
-                                <Divider />
-                                <View>
-                                    <View
-                                        style={{
-                                            flexDirection: "row",
-                                            alignItems: "center",
-                                            justifyContent: "space-between"
-                                        }}
-                                    >
-                                        <Text
-                                            style={{
-                                                fontSize: 14,
-                                                fontWeight: "700"
-                                            }}
-                                        >
-                                            ErenElagz
-                                        </Text>
-                                        <Text
-                                            style={{
-                                                fontSize: 12,
-                                                fontWeight: "600",
-                                                margin: 4
-                                            }}
-                                        >
-                                            21/12/23
-                                        </Text>
-                                    </View>
-                                    <Text>Çok nays yani herkes gelp görmeli. ❤️</Text>
-                                </View>
-                            </View>
-                        </View>
                     </View>
                 </BottomSheet>
             </View>
