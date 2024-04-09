@@ -25,7 +25,7 @@ export default function Response(props) {
 		<View style={styles.response}>
 			<View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
 				<View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-					<Image source={require("../assets//icons/robot.png")} style={styles.icon} />
+					<Image source={require("../../assets/icons/robot.png")} style={styles.icon} />
 					<Text style={{ fontWeight: 600 }}>Gemini</Text>
 				</View>
 				<Text style={{ fontSize: 10, fontWeight: "600" }}>

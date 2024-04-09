@@ -8,7 +8,7 @@ export default function Message(props) {
 		<View style={styles.message}>
 			<View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
 				<View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-					<Image source={require("../assets//icons/user.png")} style={styles.icon} />
+					<Image source={require("../../assets/icons/user.png")} style={styles.icon} />
 					<Text style={{ fontWeight: 500 }}>Username</Text>
 				</View>
 				<Text style={{ fontSize: 10, fontWeight: 600 }}>
