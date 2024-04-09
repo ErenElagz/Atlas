@@ -25,6 +25,13 @@ export default function App() {
             <StatusBar style="auto" />
 
             {/* Header */}
+            <View style={styles.header}>
+                <Image
+                    style={styles.logo}
+                    source={require("../assets/img/logo.png")}
+                />
+                <Text style={styles.title}>Atlas AI</Text>
+            </View>
 
             {/* Content */}
             <FlatList
@@ -70,7 +77,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         paddingHorizontal: 16,
-        margin: 8,
+        marginTop: 32,
         gap: 8
     },
     icon: {
@@ -92,10 +99,17 @@ const styles = StyleSheet.create({
     input: {
         backgroundColor: "#fff",
         width: "100%",
-        fontSize: 16,
-        paddingVertical: 16,
-        paddingHorizontal: 24,
-        borderRadius: 32,
+        fontSize: 14,
+        paddingVertical: 12,
+        paddingHorizontal: 20,
+        borderRadius: 16,
         borderWidth: 0.1
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: "700"
+    },
+    logo: {
+        width:32,height:32
     }
 });

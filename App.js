@@ -37,7 +37,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="Atlas AI" component={HomeScreen} />
                 <Stack.Screen name="Map" component={MapScreen} />
                 <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
@@ -59,10 +59,11 @@ const styles = StyleSheet.create({
         width: "92%",
         alignItems: "center",
         padding: 20,
-        borderWidth:1,
-        borderColor:"#ddd"
-    },text:{
-        color:"#969696",
-        fontWeight:"600"
+        borderWidth: 1,
+        borderColor: "#ddd"
+    },
+    text: {
+        color: "#969696",
+        fontWeight: "600"
     }
 });
