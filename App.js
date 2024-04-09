@@ -15,19 +15,19 @@ function HomeScreen({ navigation }) {
                 style={styles.button}
                 onPress={() => navigation.navigate("Map")}
             >
-                <Text>Go to Maps</Text>
+                <Text style={styles.text}>Go to Maps</Text>
             </Pressable>
             <Pressable
                 style={styles.button}
                 onPress={() => navigation.navigate("ChatBotScreen")}
             >
-                <Text>Go to ChatBot Screen</Text>
+                <Text style={styles.text}>Go to ChatBot Screen</Text>
             </Pressable>
             <Pressable
                 style={styles.button}
                 onPress={() => navigation.navigate("ProfileScreen")}
             >
-                <Text>Go to Profile Screen</Text>
+                <Text style={styles.text}>Go to Profile Screen</Text>
             </Pressable>
         </View>
     );
@@ -55,18 +55,14 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff"
     },
     button: {
-        borderRadius: 16,
-        width: "90%",
+        borderRadius: 12,
+        width: "92%",
         alignItems: "center",
         padding: 20,
-        backgroundColor: "#fafafa",
-        shadowColor: "#000000",
-        shadowOffset: {
-            width: 0,
-            height: 18
-        },
-        shadowOpacity: 20,
-        shadowRadius: 20.0,
-        elevation: 6
+        borderWidth:1,
+        borderColor:"#ddd"
+    },text:{
+        color:"#969696",
+        fontWeight:"600"
     }
 });

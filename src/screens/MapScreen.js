@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState, useEffect } from "react";
+import React, { useMemo, useRef, useState} from "react";
 import { View, StyleSheet, Text, TextInput, Image } from "react-native";
 import MapView from "react-native-maps";
 import MarkerComponentCallout from "../components/map/marker";
