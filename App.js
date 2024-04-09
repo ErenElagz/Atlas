@@ -1,13 +1,16 @@
 import * as React from "react";
-import { Button, View, Pressable, Text, StyleSheet } from "react-native";
+import { View, Pressable, Text, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MapScreen from "./src/screens/MapScreen";
+import { StatusBar } from "expo-status-bar";
 import ProfileScreen from "./src/screens/ProfileScreen";
 import ChatBotScreen from "./src/screens/ChatBotScreen";
 function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
+            <StatusBar style="auto" />
+
             <Pressable
                 style={styles.button}
                 onPress={() => navigation.navigate("Map")}
