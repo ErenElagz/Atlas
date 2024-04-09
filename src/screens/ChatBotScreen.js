@@ -110,6 +110,7 @@ const styles = StyleSheet.create({
         fontWeight: "700"
     },
     logo: {
-        width:32,height:32
+        width: 32,
+        height: 32
     }
 });

@@ -6,11 +6,11 @@ import MapScreen from "./src/screens/MapScreen";
 import { StatusBar } from "expo-status-bar";
 import ProfileScreen from "./src/screens/ProfileScreen";
 import ChatBotScreen from "./src/screens/ChatBotScreen";
+import SplashScreen from "./src/screens/SplashScreen";
 function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
-
             <Pressable
                 style={styles.button}
                 onPress={() => navigation.navigate("Map")}
@@ -29,6 +29,12 @@ function HomeScreen({ navigation }) {
             >
                 <Text style={styles.text}>Go to Profile Screen</Text>
             </Pressable>
+            <Pressable
+                style={styles.button}
+                onPress={() => navigation.navigate("SplashScreen")}
+            >
+                <Text style={styles.text}>Go to Splash Screen</Text>
+            </Pressable>
         </View>
     );
 }
@@ -42,6 +48,7 @@ export default function App() {
                 <Stack.Screen name="Map" component={MapScreen} />
                 <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
                 <Stack.Screen name="ChatBotScreen" component={ChatBotScreen} />
+                <Stack.Screen name="SplashScreen" component={SplashScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );

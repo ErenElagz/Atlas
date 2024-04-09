@@ -38,7 +38,7 @@ export default function MapScreen() {
                 ></TextInput>
                 <BottomSheet
                     ref={BottomSheetRef}
-                    index={1}
+                    index={0}
                     snapPoints={snapPoints}
                 >
                     <View style={styles.container2}>
