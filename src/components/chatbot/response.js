@@ -24,9 +24,9 @@ export default function Response(props) {
 	return (
 		<View style={styles.response}>
 			<View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-				<View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-					<Image source={require("../../assets/icons/robot.png")} style={styles.icon} />
-					<Text style={{ fontWeight: 600 }}>Gemini</Text>
+				<View style={{ flexDirection: "row", alignItems: "center", gap: 4 }}>
+					<Image source={require("../../assets/img/logo.png")} style={styles.icon} />
+					<Text style={{ fontWeight: 700,fontSize:16 }}>Atlas</Text>
 				</View>
 				<Text style={{ fontSize: 10, fontWeight: "600" }}>
 					{date.getHours()}:{date.getMinutes()}
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 		borderRadius: 16,
 	},
 	icon: {
-		width: 28,
-		height: 28,
+		width: 20,
+		height: 20,
 	},
 });

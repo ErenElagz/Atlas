@@ -51,14 +51,14 @@ export default function SplashScreen() {
                             style={styles.logo2}
                             source={require("../assets/icons/google.png")}
                         />
-                        <Text style={styles.text1}>Sign with Google</Text>
+                        <Text style={styles.text1}>Login with Google</Text>
                     </Pressable>
                     <Pressable style={styles.facebook}>
                         <Image
                             style={styles.logo2}
                             source={require("../assets/icons/facebook.png")}
                         />
-                        <Text style={styles.text2}>Sign with Facebook</Text>
+                        <Text style={styles.text2}>Login with Facebook</Text>
                     </Pressable>
                 </View>
             </View>
@@ -137,11 +137,11 @@ const styles = StyleSheet.create({
     },
     orView: {
         flexDirection: "row",
-        paddingHorizontal: 32,
+        paddingHorizontal: 48,
         alignItems: "center",
-        gap: 16
+        gap: 16,paddingVertical:4
     },
-    or: { fontSize: 14, color: "#bbb" },
+    or: { fontSize: 12, color: "#bbb" },
     div: { flexGrow: 1, backgroundColor: "#eee", height: 1.5 },
     google: {
         backgroundColor: "#fafafa",

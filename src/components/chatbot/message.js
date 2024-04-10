@@ -7,9 +7,9 @@ export default function Message(props) {
 	return (
 		<View style={styles.message}>
 			<View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-				<View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+				<View style={{ flexDirection: "row", alignItems: "center", gap: 4 }}>
 					<Image source={require("../../assets/icons/user.png")} style={styles.icon} />
-					<Text style={{ fontWeight: 500 }}>Username</Text>
+					<Text style={{ fontWeight: 600 }}>Username</Text>
 				</View>
 				<Text style={{ fontSize: 10, fontWeight: 600 }}>
 					{date.getHours()}:{date.getMinutes()}
@@ -24,13 +24,13 @@ const styles = StyleSheet.create({
 	message: {
 		flexDirection: "column",
 		gap: 8,
-		backgroundColor: "#f1f2f3",
+		backgroundColor: "#f5f5f5",
 		marginBottom: 8,
 		padding: 16,
 		borderRadius: 16,
 	},
 	icon: {
-		width: 28,
-		height: 28,
+		width: 20,
+		height: 20,
 	},
 });
