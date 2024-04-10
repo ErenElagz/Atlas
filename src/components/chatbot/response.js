@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import Markdown from "react-native-markdown-display";
+import { GEMINI_API_KEY } from "../../apis/gemini-api";
 
 const date = new Date();
-const API_KEY = "YOUR API KEY";
-const genAI = new GoogleGenerativeAI(API_KEY);
+const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 export default function Response(props) {
 	const [generatedText, setGeneratedText] = useState("");

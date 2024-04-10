@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         padding: 16,
         width: "100%",
-        gap: 8
+        gap: 8,alignSelf:"center"
     },
     sign1: {
         backgroundColor: "#fafafa",
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 32
     },
     thirdView: {
-        paddingHorizontal: 32,
+        paddingHorizontal: 24,
         alignItems: "center",
         gap: 8,
         paddingTop: 12
