@@ -3,7 +3,6 @@ import {
     View,
     StyleSheet,
     Text,
-    Image,
     Dimensions,
     Pressable,
     TextInput
@@ -33,20 +32,18 @@ export default function ForgotPassword() {
                         <Text style={styles.text2}>Send Email</Text>
                     </Pressable>
                 </View>
-
-                <View>
-                    <Text
-                        style={{
-                            fontSize: 14,
-                            fontWeight: "600",
-                            textAlign: "center",
-                            marginTop: 24,
-                            color: "#969696"
-                        }}
-                    >
-                        Go Back
-                    </Text>
-                </View>
+                <Text
+                    style={{
+                        fontSize: 14,
+                        fontWeight: "600",
+                        textAlign: "center",
+                        marginTop: 8,
+                        color: "#969696",
+                        textDecorationLine: "underline"
+                    }}
+                >
+                    Go Back
+                </Text>
             </View>
         </View>
     );

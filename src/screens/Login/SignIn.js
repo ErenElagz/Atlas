@@ -21,7 +21,7 @@ export default function SignIn() {
             </View>
 
             <View>
-                <View style={{ paddingHorizontal: 32, marginTop: 32,gap:8 }}>
+                <View style={{ paddingHorizontal: 32, marginTop: 32, gap: 8 }}>
                     <TextInput
                         placeholder="E-mail"
                         style={styles.input}
@@ -66,7 +66,8 @@ export default function SignIn() {
                             fontWeight: "600",
                             textAlign: "center",
                             marginTop: 24,
-                            color: "#969696"
+                            color: "#969696",
+                            textDecorationLine: "underline"
                         }}
                     >
                         Create an Account? Sign Up
@@ -184,6 +185,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         paddingVertical: 14,
         paddingHorizontal: 20,
-        borderRadius: 12,
+        borderRadius: 12
     }
 });

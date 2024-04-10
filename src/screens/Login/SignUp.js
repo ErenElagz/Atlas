@@ -76,7 +76,8 @@ export default function SignUp() {
                             fontWeight: "600",
                             textAlign: "center",
                             marginTop: 24,
-                            color: "#969696"
+                            color: "#969696",
+                            textDecorationLine: "underline"
                         }}
                     >
                         Have an account? Sign In
