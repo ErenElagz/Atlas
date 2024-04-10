@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-export default function SignIn() {
+export default function SignIn({ navigation }) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
@@ -33,6 +33,21 @@ export default function SignIn() {
                         selectionColor={"#323232"}
                     ></TextInput>
                 </View>
+                <View style={{ paddingHorizontal: 32, marginTop: 16 }}>
+                    <Pressable onPress={() => navigation.navigate("ForgotPassword")}>
+                        <Text
+                            style={{
+                                textAlign: "right",
+                                textDecorationLine: "underline",
+                                color: "#aaa",
+                                fontWeight: "600"
+                            }}
+                        >
+                            Forgot Password
+                        </Text>
+                    </Pressable>
+                </View>
+
                 <View style={styles.sign}>
                     <Pressable style={styles.sign2}>
                         <Text style={styles.text2}>Sign In</Text>
@@ -59,7 +74,7 @@ export default function SignIn() {
                         <Text style={styles.text2}>Sign in Facebook</Text>
                     </Pressable>
                 </View>
-                <View>
+                <Pressable onPress={() => navigation.navigate("SignUp")}>
                     <Text
                         style={{
                             fontSize: 14,
@@ -70,9 +85,9 @@ export default function SignIn() {
                             textDecorationLine: "underline"
                         }}
                     >
-                        Create an Account? Sign Up
+                        Create a Account? Sign Up
                     </Text>
-                </View>
+                </Pressable>
             </View>
         </View>
     );

@@ -8,8 +8,9 @@ import {
     TextInput
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from "@react-navigation/native";
 
-export default function ForgotPassword() {
+export default function ForgotPassword({navigation}) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
@@ -32,18 +33,22 @@ export default function ForgotPassword() {
                         <Text style={styles.text2}>Send Email</Text>
                     </Pressable>
                 </View>
-                <Text
-                    style={{
-                        fontSize: 14,
-                        fontWeight: "600",
-                        textAlign: "center",
-                        marginTop: 8,
-                        color: "#969696",
-                        textDecorationLine: "underline"
-                    }}
+                <Pressable
+                    onPress={() => navigation.navigate("SignIn")}
                 >
-                    Go Back
-                </Text>
+                    <Text
+                        style={{
+                            fontSize: 14,
+                            fontWeight: "600",
+                            textAlign: "center",
+                            marginTop: 8,
+                            color: "#969696",
+                            textDecorationLine: "underline"
+                        }}
+                    >
+                        Go Back
+                    </Text>
+                </Pressable>
             </View>
         </View>
     );

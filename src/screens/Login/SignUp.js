@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-export default function SignUp() {
+export default function SignUp({navigation}) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
@@ -69,7 +69,7 @@ export default function SignUp() {
                         <Text style={styles.text2}>Sign up Facebook</Text>
                     </Pressable>
                 </View>
-                <View>
+                <Pressable onPress={() => navigation.navigate("SignIn")}>
                     <Text
                         style={{
                             fontSize: 14,
@@ -82,7 +82,7 @@ export default function SignUp() {
                     >
                         Have an account? Sign In
                     </Text>
-                </View>
+                </Pressable>
             </View>
         </View>
     );

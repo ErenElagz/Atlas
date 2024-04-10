@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-export default function SplashScreen() {
+export default function SplashScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
@@ -33,10 +33,16 @@ export default function SplashScreen() {
 
             <View>
                 <View style={styles.sign}>
-                    <Pressable style={styles.sign2}>
+                    <Pressable
+                        style={styles.sign2}
+                        onPress={() => navigation.navigate("SignIn")}
+                    >
                         <Text style={styles.text2}>Sign In</Text>
                     </Pressable>
-                    <Pressable style={styles.sign1}>
+                    <Pressable
+                        style={styles.sign1}
+                        onPress={() => navigation.navigate("SignUp")}
+                    >
                         <Text style={styles.text1}>Sign Up</Text>
                     </Pressable>
                 </View>
@@ -106,7 +112,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         padding: 16,
         width: "100%",
-        gap: 8,alignSelf:"center"
+        gap: 8,
+        alignSelf: "center"
     },
     sign1: {
         backgroundColor: "#fafafa",
@@ -139,7 +146,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         paddingHorizontal: 48,
         alignItems: "center",
-        gap: 16,paddingVertical:4
+        gap: 16,
+        paddingVertical: 4
     },
     or: { fontSize: 12, color: "#bbb" },
     div: { flexGrow: 1, backgroundColor: "#eee", height: 1.5 },
