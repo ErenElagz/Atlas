@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
         height: 24
     },
     slogan: {
-        fontSize: 14,
+        fontSize: 12,
         color: "#aaa",fontWeight:"500"
     },
     img: {
