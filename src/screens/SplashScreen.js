@@ -87,7 +87,8 @@ const styles = StyleSheet.create({
     logo: {
         width: 32,
         height: 32
-    },    logo2: {
+    },
+    logo2: {
         width: 24,
         height: 24
     },
@@ -124,11 +125,15 @@ const styles = StyleSheet.create({
         flexGrow: 1
     },
     text1: {
-        fontSize: 14
+        fontSize: 14,
+        width: "100%",
+        textAlign: "center"
     },
     text2: {
         fontSize: 14,
-        color: "#fff"
+        color: "#fff",
+        width: "100%",
+        textAlign: "center"
     },
     orView: {
         flexDirection: "row",
@@ -146,7 +151,9 @@ const styles = StyleSheet.create({
         borderRadius: 32,
         width: "100%",
         flexDirection: "row",
-        gap: 16
+        paddingHorizontal: 32,
+        gap: 16,
+        textAlign: "center"
     },
     facebook: {
         backgroundColor: "#1877F2",
@@ -156,7 +163,9 @@ const styles = StyleSheet.create({
         borderRadius: 32,
         width: "100%",
         flexDirection: "row",
-        gap: 16
+        gap: 16,
+        textAlign: "center",
+        paddingHorizontal: 32
     },
     thirdView: {
         paddingHorizontal: 32,
