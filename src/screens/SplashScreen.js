@@ -19,7 +19,7 @@ export default function SplashScreen({ navigation }) {
                         style={styles.logo}
                         source={require("../assets/img/logo.png")}
                     />
-                    <Text style={styles.title}>Atlas AI</Text>
+                    <Text style={styles.title}>Atlas</Text>
                 </View>
                 <Text style={styles.slogan}>
                     AI Powered Route & Trip Planner
@@ -70,7 +70,8 @@ export default function SplashScreen({ navigation }) {
                         style={{
                             fontSize: 12,
                             marginTop: 8,
-                            textAlign: "center"
+                            textAlign: "center",
+                            color: "#aaa"
                         }}
                     >
                         When you logging in to the Atlas. You accepting Our
@@ -94,7 +95,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingHorizontal: 16,
         marginTop: 32,
-        gap: 4
+        gap: 4,
+        justifyContent:"center"
     },
     title: {
         fontSize: 32,
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
     },
     slogan: {
         fontSize: 14,
-        color: "#aaa"
+        color: "#aaa",fontWeight:"500"
     },
     img: {
         width: Dimensions.get("window").width,
