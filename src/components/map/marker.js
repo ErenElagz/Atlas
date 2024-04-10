@@ -13,7 +13,6 @@ export default function MarkerComponentCallout({ setData }) {
         <>
             {destinations.map((destination, index) => (
                 <Marker
-                    style={styles.marker}
                     key={index}
                     coordinate={destination}
                     title={destination.name}
