@@ -66,6 +66,16 @@ export default function SplashScreen({ navigation }) {
                         />
                         <Text style={styles.text2}>Login with Facebook</Text>
                     </Pressable>
+                    <Text
+                        style={{
+                            fontSize: 12,
+                            marginTop: 8,
+                            textAlign: "center"
+                        }}
+                    >
+                        When you logging in to the Atlas. You accepting Our
+                        Terms and Conditions
+                    </Text>
                 </View>
             </View>
         </View>

@@ -16,7 +16,7 @@ export default function SignIn({ navigation }) {
             <StatusBar style="auto" />
             <View>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Login the Atlas</Text>
+                    <Text style={styles.title}>Login to Atlas</Text>
                 </View>
             </View>
 
