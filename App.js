@@ -7,6 +7,9 @@ import { StatusBar } from "expo-status-bar";
 import ProfileScreen from "./src/screens/ProfileScreen";
 import ChatBotScreen from "./src/screens/ChatBotScreen";
 import SplashScreen from "./src/screens/SplashScreen";
+import SignIn from "./src/screens/Login/SignIn";
+import SignUp from "./src/screens/Login/SignUp";
+import ForgotPassword from "./src/screens/Login/ForgotPassword";
 function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
@@ -15,25 +18,43 @@ function HomeScreen({ navigation }) {
                 style={styles.button}
                 onPress={() => navigation.navigate("Map")}
             >
-                <Text style={styles.text}>Go to Maps</Text>
+                <Text style={styles.text}>Maps</Text>
             </Pressable>
             <Pressable
                 style={styles.button}
                 onPress={() => navigation.navigate("ChatBotScreen")}
             >
-                <Text style={styles.text}>Go to ChatBot Screen</Text>
+                <Text style={styles.text}>ChatBot</Text>
             </Pressable>
             <Pressable
                 style={styles.button}
                 onPress={() => navigation.navigate("ProfileScreen")}
             >
-                <Text style={styles.text}>Go to Profile Screen</Text>
+                <Text style={styles.text}>Profile</Text>
             </Pressable>
             <Pressable
                 style={styles.button}
                 onPress={() => navigation.navigate("SplashScreen")}
             >
-                <Text style={styles.text}>Go to Splash Screen</Text>
+                <Text style={styles.text}>Splash</Text>
+            </Pressable>
+            <Pressable
+                style={styles.button}
+                onPress={() => navigation.navigate("SignIn")}
+            >
+                <Text style={styles.text}>SignIn</Text>
+            </Pressable>
+            <Pressable
+                style={styles.button}
+                onPress={() => navigation.navigate("SignUp")}
+            >
+                <Text style={styles.text}>SignUp</Text>
+            </Pressable>
+            <Pressable
+                style={styles.button}
+                onPress={() => navigation.navigate("ForgotPassword")}
+            >
+                <Text style={styles.text}>ForgotPassword</Text>
             </Pressable>
         </View>
     );
@@ -49,6 +70,9 @@ export default function App() {
                 <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
                 <Stack.Screen name="ChatBotScreen" component={ChatBotScreen} />
                 <Stack.Screen name="SplashScreen" component={SplashScreen} />
+                <Stack.Screen name="SignIn" component={SignIn} />
+                <Stack.Screen name="SignUp" component={SignUp} />
+                <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
             </Stack.Navigator>
         </NavigationContainer>
     );
