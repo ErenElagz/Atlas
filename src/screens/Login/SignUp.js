@@ -1,16 +1,8 @@
 import React from "react";
-import {
-    View,
-    StyleSheet,
-    Text,
-    Image,
-    Dimensions,
-    Pressable,
-    TextInput
-} from "react-native";
+import { View, StyleSheet, Text, Image, Dimensions, Pressable, TextInput } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-export default function SignUp({navigation}) {
+export default function SignUp({ navigation }) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
@@ -22,26 +14,10 @@ export default function SignUp({navigation}) {
 
             <View>
                 <View style={{ paddingHorizontal: 32, marginTop: 32, gap: 8 }}>
-                    <TextInput
-                        placeholder="Username"
-                        style={styles.input}
-                        selectionColor={"#323232"}
-                    ></TextInput>
-                    <TextInput
-                        placeholder="E-mail"
-                        style={styles.input}
-                        selectionColor={"#323232"}
-                    ></TextInput>
-                    <TextInput
-                        placeholder="Password"
-                        style={styles.input}
-                        selectionColor={"#323232"}
-                    ></TextInput>
-                    <TextInput
-                        placeholder="Re-Password"
-                        style={styles.input}
-                        selectionColor={"#323232"}
-                    ></TextInput>
+                    <TextInput placeholder="Username" style={styles.input} selectionColor={"#323232"}></TextInput>
+                    <TextInput placeholder="E-mail" style={styles.input} selectionColor={"#323232"}></TextInput>
+                    <TextInput placeholder="Password" style={styles.input} selectionColor={"#323232"}></TextInput>
+                    <TextInput placeholder="Re-Password" style={styles.input} selectionColor={"#323232"}></TextInput>
                 </View>
                 <View style={styles.sign}>
                     <Pressable style={styles.sign2}>
@@ -55,17 +31,11 @@ export default function SignUp({navigation}) {
                 </View>
                 <View style={styles.thirdView}>
                     <Pressable style={styles.google}>
-                        <Image
-                            style={styles.logo2}
-                            source={require("../../assets/icons/google.png")}
-                        />
+                        <Image style={styles.logo2} source={require("../../assets/icons/google.png")} />
                         <Text style={styles.text1}>Sign up Google</Text>
                     </Pressable>
                     <Pressable style={styles.facebook}>
-                        <Image
-                            style={styles.logo2}
-                            source={require("../../assets/icons/facebook.png")}
-                        />
+                        <Image style={styles.logo2} source={require("../../assets/icons/facebook.png")} />
                         <Text style={styles.text2}>Sign up Facebook</Text>
                     </Pressable>
                 </View>

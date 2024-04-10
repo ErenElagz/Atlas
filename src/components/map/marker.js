@@ -1,14 +1,12 @@
 import React from "react";
 import IstanbulData from "../../apis/places.json";
 import { Marker } from "react-native-maps";
-import { StyleSheet } from "react-native";
 
 export default function MarkerComponentCallout({ setData }) {
     const sendData = () => {
         const data = [];
         setData(data);
     };
-
     const destinations = IstanbulData.destination.best_destinations;
 
     return (
@@ -22,14 +20,8 @@ export default function MarkerComponentCallout({ setData }) {
                     onPress={() => {
                         setData(destination);
                         sendData;
-                    }}
-                ></Marker>
+                    }}></Marker>
             ))}
         </>
     );
 }
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    }
-});

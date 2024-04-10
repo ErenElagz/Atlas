@@ -1,13 +1,5 @@
 import React from "react";
-import {
-    View,
-    StyleSheet,
-    Text,
-    Image,
-    Dimensions,
-    Pressable,
-    TextInput
-} from "react-native";
+import { View, StyleSheet, Text, Image, Dimensions, Pressable, TextInput } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 export default function SignIn({ navigation }) {
@@ -22,16 +14,8 @@ export default function SignIn({ navigation }) {
 
             <View>
                 <View style={{ paddingHorizontal: 32, marginTop: 32, gap: 8 }}>
-                    <TextInput
-                        placeholder="E-mail"
-                        style={styles.input}
-                        selectionColor={"#323232"}
-                    ></TextInput>
-                    <TextInput
-                        placeholder="Password"
-                        style={styles.input}
-                        selectionColor={"#323232"}
-                    ></TextInput>
+                    <TextInput placeholder="E-mail" style={styles.input} selectionColor={"#323232"}></TextInput>
+                    <TextInput placeholder="Password" style={styles.input} selectionColor={"#323232"}></TextInput>
                 </View>
                 <View style={{ paddingHorizontal: 32, marginTop: 16 }}>
                     <Pressable onPress={() => navigation.navigate("ForgotPassword")}>
@@ -60,17 +44,11 @@ export default function SignIn({ navigation }) {
                 </View>
                 <View style={styles.thirdView}>
                     <Pressable style={styles.google}>
-                        <Image
-                            style={styles.logo2}
-                            source={require("../../assets/icons/google.png")}
-                        />
+                        <Image style={styles.logo2} source={require("../../assets/icons/google.png")} />
                         <Text style={styles.text1}>Sign in Google</Text>
                     </Pressable>
                     <Pressable style={styles.facebook}>
-                        <Image
-                            style={styles.logo2}
-                            source={require("../../assets/icons/facebook.png")}
-                        />
+                        <Image style={styles.logo2} source={require("../../assets/icons/facebook.png")} />
                         <Text style={styles.text2}>Sign in Facebook</Text>
                     </Pressable>
                 </View>

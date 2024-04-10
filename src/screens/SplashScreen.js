@@ -1,12 +1,5 @@
 import React from "react";
-import {
-    View,
-    StyleSheet,
-    Text,
-    Image,
-    Dimensions,
-    Pressable
-} from "react-native";
+import { View, StyleSheet, Text, Image, Dimensions, Pressable } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 export default function SplashScreen({ navigation }) {
@@ -21,9 +14,7 @@ export default function SplashScreen({ navigation }) {
                     />
                     <Text style={styles.title}>Atlas</Text>
                 </View>
-                <Text style={styles.slogan}>
-                    AI Powered Route & Trip Planner
-                </Text>
+                <Text style={styles.slogan}>AI Powered Route & Trip Planner</Text>
             </View>
 
             <Image
@@ -35,14 +26,12 @@ export default function SplashScreen({ navigation }) {
                 <View style={styles.sign}>
                     <Pressable
                         style={styles.sign2}
-                        onPress={() => navigation.navigate("SignIn")}
-                    >
+                        onPress={() => navigation.navigate("SignIn")}>
                         <Text style={styles.text2}>Sign In</Text>
                     </Pressable>
                     <Pressable
                         style={styles.sign1}
-                        onPress={() => navigation.navigate("SignUp")}
-                    >
+                        onPress={() => navigation.navigate("SignUp")}>
                         <Text style={styles.text1}>Sign Up</Text>
                     </Pressable>
                 </View>
@@ -72,10 +61,8 @@ export default function SplashScreen({ navigation }) {
                             marginTop: 8,
                             textAlign: "center",
                             color: "#aaa"
-                        }}
-                    >
-                        When you logging in to the Atlas. You accepting Our
-                        Terms and Conditions
+                        }}>
+                        When you logging in to the Atlas. You accepting Our Terms and Conditions
                     </Text>
                 </View>
             </View>
@@ -96,37 +83,14 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         marginTop: 32,
         gap: 4,
-        justifyContent:"center"
+        justifyContent: "center"
     },
-    title: {
-        fontSize: 32,
-        fontWeight: "700"
-    },
-    logo: {
-        width: 32,
-        height: 32
-    },
-    logo2: {
-        width: 24,
-        height: 24
-    },
-    slogan: {
-        fontSize: 12,
-        color: "#aaa",fontWeight:"500"
-    },
-    img: {
-        width: Dimensions.get("window").width,
-        height: Dimensions.get("window").width,
-        aspectRatio: "1/1"
-    },
-    button: {},
-    sign: {
-        flexDirection: "row",
-        padding: 16,
-        width: "100%",
-        gap: 8,
-        alignSelf: "center"
-    },
+    title: { fontSize: 32, fontWeight: "700" },
+    logo: { width: 32, height: 32 },
+    logo2: { width: 24, height: 24 },
+    slogan: { fontSize: 12, color: "#aaa", fontWeight: "500" },
+    img: { width: Dimensions.get("window").width, height: Dimensions.get("window").width },
+    sign: { flexDirection: "row", padding: 16, width: "100%", gap: 8, alignSelf: "center" },
     sign1: {
         backgroundColor: "#fafafa",
         alignItems: "center",
@@ -143,17 +107,11 @@ const styles = StyleSheet.create({
         borderRadius: 32,
         flexGrow: 1
     },
-    text1: {
-        fontSize: 14,
-        width: "100%",
-        textAlign: "center"
-    },
-    text2: {
-        fontSize: 14,
-        color: "#fff",
-        width: "100%",
-        textAlign: "center"
-    },
+    text1: { fontSize: 14, width: "100%", textAlign: "center" },
+    text2: { fontSize: 14, color: "#fff", width: "100%", textAlign: "center" },
+    or: { fontSize: 12, color: "#bbb" },
+    div: { flexGrow: 1, backgroundColor: "#eee", height: 1.5 },
+    thirdView: { paddingHorizontal: 24, alignItems: "center", gap: 8, paddingTop: 12 },
     orView: {
         flexDirection: "row",
         paddingHorizontal: 48,
@@ -161,8 +119,6 @@ const styles = StyleSheet.create({
         gap: 16,
         paddingVertical: 4
     },
-    or: { fontSize: 12, color: "#bbb" },
-    div: { flexGrow: 1, backgroundColor: "#eee", height: 1.5 },
     google: {
         backgroundColor: "#fafafa",
         alignItems: "center",
@@ -186,11 +142,5 @@ const styles = StyleSheet.create({
         gap: 16,
         textAlign: "center",
         paddingHorizontal: 32
-    },
-    thirdView: {
-        paddingHorizontal: 24,
-        alignItems: "center",
-        gap: 8,
-        paddingTop: 12
     }
 });

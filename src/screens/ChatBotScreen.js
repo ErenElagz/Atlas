@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import {
-    StyleSheet,
-    Text,
-    View,
-    Image,
-    FlatList,
-    TextInput,
-    TouchableOpacity
-} from "react-native";
+import { StyleSheet, Text, View, Image, FlatList, TextInput, TouchableOpacity } from "react-native";
 import Response from "../components/chatbot/response";
 import Message from "../components/chatbot/message";
 
@@ -24,7 +16,6 @@ export default function App() {
         <View style={styles.container}>
             <StatusBar style="auto" />
 
-            {/* Header */}
             <View style={styles.header}>
                 <Image
                     style={styles.logo}
@@ -33,7 +24,6 @@ export default function App() {
                 <Text style={styles.title}>Atlas AI</Text>
             </View>
 
-            {/* Content */}
             <FlatList
                 style={{ paddingHorizontal: 16, marginBottom: 80 }}
                 data={listData}
@@ -46,15 +36,13 @@ export default function App() {
                 keyExtractor={(item, index) => index.toString()}
             />
 
-            {/* Search-Bar */}
             <View style={styles.searchBar}>
                 <TextInput
                     placeholder="Ask to Gemini AI"
                     style={styles.input}
                     value={inputText}
                     onChangeText={text => setInputText(text)}
-                    selectionColor={"#323232"}
-                ></TextInput>
+                    selectionColor={"#323232"}></TextInput>
                 <TouchableOpacity onPress={SearchInput}>
                     <Image
                         source={require("../assets/icons/right-arrow.png")}
@@ -67,50 +55,20 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        gap: 16,
-        paddingTop: 12,
-        backgroundColor: "#fff"
-    },
-    header: {
-        flexDirection: "row",
-        alignItems: "center",
-        paddingHorizontal: 16,
-        marginTop: 32,
-        gap: 8
-    },
-    icon: {
-        width: 32,
-        height: 32
-    },
+    container: { flex: 1, gap: 16, paddingTop: 48 },
+    header: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, gap: 8 },
+    title: { fontSize: 24, fontWeight: "700" },
+    logo: { width: 24, height: 24 },
+    icon: { width: 32, height: 32 },
+    input: { flex: 1, fontSize: 14 },
     searchBar: {
-        backgroundColor: "#ffffff",
+        backgroundColor: "#fafafa",
         width: "100%",
         position: "absolute",
         bottom: 0,
         flexDirection: "row",
-        justifyContent: "center",
         alignItems: "center",
-        paddingHorizontal: 32,
-        paddingVertical: 16,
+        padding: 20,
         gap: 8
-    },
-    input: {
-        backgroundColor: "#fff",
-        width: "100%",
-        fontSize: 14,
-        paddingVertical: 12,
-        paddingHorizontal: 20,
-        borderRadius: 16,
-        borderWidth: 0.1
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: "700"
-    },
-    logo: {
-        width: 32,
-        height: 32
     }
 });

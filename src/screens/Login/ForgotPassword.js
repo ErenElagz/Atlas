@@ -1,15 +1,8 @@
 import React from "react";
-import {
-    View,
-    StyleSheet,
-    Text,
-    Dimensions,
-    Pressable,
-    TextInput
-} from "react-native";
+import { View, StyleSheet, Text, Dimensions, Pressable, TextInput } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-export default function ForgotPassword({navigation}) {
+export default function ForgotPassword({ navigation }) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
@@ -21,20 +14,14 @@ export default function ForgotPassword({navigation}) {
 
             <View>
                 <View style={{ paddingHorizontal: 32, marginTop: 32, gap: 8 }}>
-                    <TextInput
-                        placeholder="E-mail"
-                        style={styles.input}
-                        selectionColor={"#323232"}
-                    ></TextInput>
+                    <TextInput placeholder="E-mail" style={styles.input} selectionColor={"#323232"}></TextInput>
                 </View>
                 <View style={styles.sign}>
                     <Pressable style={styles.sign2}>
                         <Text style={styles.text2}>Send Email</Text>
                     </Pressable>
                 </View>
-                <Pressable
-                    onPress={() => navigation.navigate("SignIn")}
-                >
+                <Pressable onPress={() => navigation.navigate("SignIn")}>
                     <Text
                         style={{
                             fontSize: 14,
