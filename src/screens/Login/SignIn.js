@@ -11,11 +11,13 @@ export default function SignIn({ navigation }) {
                 <TextInput
                     selectionColor={"#000"}
                     placeholder="E-mail"
+                    inputMode="email"
                     style={styles.input}></TextInput>
 
                 <TextInput
                     selectionColor={"#000"}
                     placeholder="Password"
+                    secureTextEntry={true}
                     style={styles.input}></TextInput>
             </View>
 
