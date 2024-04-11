@@ -49,12 +49,10 @@ export default function MapScreen() {
                         <View style={styles.badgesViews}>
                             {highlights &&
                                 highlights.map((highlight, index) => (
-                                    <View style={styles.badges}>
-                                        <Text
-                                            style={styles.badgesText}
-                                            key={index}>
-                                            {highlight}
-                                        </Text>
+                                    <View
+                                        style={styles.badges}
+                                        key={index}>
+                                        <Text style={styles.badgesText}>{highlight}</Text>
                                     </View>
                                 ))}
                         </View>
