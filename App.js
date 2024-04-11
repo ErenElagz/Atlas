@@ -1,9 +1,11 @@
+//Packages
 import * as React from "react";
 import { StatusBar } from "expo-status-bar";
 import { View, Pressable, Text, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+// Screens
 import MapScreen from "./src/screens/MapScreen";
 import ProfileScreen from "./src/screens/ProfileScreen";
 import ChatBotScreen from "./src/screens/ChatBotScreen";

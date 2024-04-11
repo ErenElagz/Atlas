@@ -1,0 +1,32 @@
+{
+    "categories": [
+        {
+            "name": "Ancient Cities",
+            "iconUrl": "https://example.com/icons/ancient_cities_icon.png"
+        },
+        {
+            "name": "Caves",
+            "iconUrl": "https://example.com/icons/caves_icon.png"
+        },
+        {
+            "name": "Beaches",
+            "iconUrl": "https://www.svgrepo.com/show/455135/beach-holiday.svg"
+        },
+        {
+            "name": "Museums",
+            "iconUrl": "https://www.svgrepo.com/show/490163/museum.svg"
+        },
+        {
+            "name": "National Parks",
+            "iconUrl": "https://example.com/icons/ancient_cities_icon.png"
+        },
+        {
+            "name": "Camping",
+            "iconUrl": "https://example.com/icons/caves_icon.png"
+        },
+        {
+            "name": "UNESCO Heritages",
+            "iconUrl": "https://example.com/icons/beaches_icon.png"
+        }
+    ]
+}
