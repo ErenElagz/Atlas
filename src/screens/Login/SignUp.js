@@ -45,7 +45,7 @@ export default function SignIn({ navigation }) {
                         style={styles.icon}
                         source={require("../../assets/icons/google.png")}
                     />
-                    <Text>Sign up Google</Text>
+                    <Text>Sign up with Google</Text>
                 </Pressable>
 
                 <Pressable style={[styles.thirdPart, { backgroundColor: "#1877f2" }]}>
@@ -53,7 +53,7 @@ export default function SignIn({ navigation }) {
                         style={styles.icon}
                         source={require("../../assets/icons/facebook.png")}
                     />
-                    <Text style={{ color: "#fff" }}>Sign up Facebook</Text>
+                    <Text style={{ color: "#fff" }}>Sign up with Facebook</Text>
                 </Pressable>
             </View>
 
