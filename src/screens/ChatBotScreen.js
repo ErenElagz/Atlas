@@ -59,16 +59,17 @@ const styles = StyleSheet.create({
     header: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, gap: 8 },
     title: { fontSize: 24, fontWeight: "700" },
     logo: { width: 24, height: 24 },
-    icon: { width: 32, height: 32 },
+    icon: { width: 24, height: 24 },
     input: { flex: 1, fontSize: 14 },
     searchBar: {
         backgroundColor: "#fafafa",
-        width: "100%",
         position: "absolute",
         bottom: 0,
         flexDirection: "row",
         alignItems: "center",
         padding: 20,
-        gap: 8
+        gap: 8,
+        margin: 12,
+        borderRadius: 16
     }
 });
