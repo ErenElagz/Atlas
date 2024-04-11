@@ -91,7 +91,7 @@ export default function HomeScreen() {
                                 <View style={styles.gallery}>
                                     <View>
                                         <Image
-                                            style={{ width: 200, height: 200,borderRadius:16 }}
+                                            style={{ width: 200, height: 200, borderRadius: 16 }}
                                             source={require("../assets/img/img.jpg")}
                                         />
                                     </View>
@@ -138,7 +138,10 @@ export default function HomeScreen() {
                                                         "https://www.svgrepo.com/show/528597/signpost-2.svg"
                                                     }
                                                 />
-                                                <Text style={styles.text2}>{route["distance"]}<Text> Km</Text></Text>
+                                                <Text style={styles.text2}>
+                                                    {route["distance"]}
+                                                    <Text> Km</Text>
+                                                </Text>
                                             </View>
                                             <View
                                                 style={{
@@ -178,10 +181,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8
     },
     icon: { width: 24, height: 24 },
-    text: { fontSize: 16, fontWeight: "800" },
-    text2: { fontSize: 14, fontWeight: "800" },
+    text: { fontSize: 14, fontWeight: "600" },
+    text2: { fontSize: 12, fontWeight: "600" },
     gallery: {
-        backgroundColor: "#fafafa",
+        borderWidth: 1,
+        borderColor: "#eee",
         borderRadius: 20,
         overflow: "hidden",
         paddingBottom: 16
