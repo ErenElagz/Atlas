@@ -12,18 +12,21 @@ export default function SignIn({ navigation }) {
                     selectionColor={"#000"}
                     placeholder="E-mail"
                     inputMode="email"
-                    style={styles.input}></TextInput>
+                    style={styles.input}
+                ></TextInput>
 
                 <TextInput
                     selectionColor={"#000"}
                     placeholder="Password"
                     secureTextEntry={true}
-                    style={styles.input}></TextInput>
+                    style={styles.input}
+                ></TextInput>
             </View>
 
             <Pressable
                 onPress={() => navigation.navigate("ForgotPassword")}
-                style={{ width: "100%", alignItems: "flex-end" }}>
+                style={{ width: "100%", alignItems: "flex-end" }}
+            >
                 <Text style={styles.text}>Forgot Password</Text>
             </Pressable>
 
@@ -39,10 +42,7 @@ export default function SignIn({ navigation }) {
 
             <View style={styles.view}>
                 <Pressable style={[styles.thirdPart, { backgroundColor: "#fafafa" }]}>
-                    <Image
-                        style={styles.icon}
-                        source={require("../../assets/icons/google.png")}
-                    />
+                    <Image style={styles.icon} source={require("../../assets/icons/google.png")} />
                     <Text>Sign in with Google</Text>
                 </Pressable>
 
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         padding: 16,
         alignItems: "center",
         backgroundColor: "#fff",
-        gap: 20
+        gap: 16
     },
     view: { gap: 12, width: "100%" },
     title: {

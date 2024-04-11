@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         padding: 16,
         alignItems: "center",
         backgroundColor: "#fff",
-        gap: 20
+        gap: 16
     },
     header: {
         flexDirection: "row",
@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
     slogan: { fontSize: 12, color: "#aaa", fontWeight: "500", textAlign: "center" },
     img: { width: Dimensions.get("window").width, height: Dimensions.get("window").width },
     icon: { width: 20, height: 20 },
-    text: { fontSize: 14, width: "100%", textAlign: "center" },
-    
+    text: { fontSize: 14, width: "100%" },
+
     view: { gap: 12, width: "100%" },
     thirdPart: {
         justifyContent: "center",

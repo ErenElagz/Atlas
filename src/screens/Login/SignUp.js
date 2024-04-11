@@ -11,22 +11,26 @@ export default function SignIn({ navigation }) {
                 <TextInput
                     selectionColor={"#000"}
                     placeholder="Username"
-                    style={styles.input}></TextInput>
+                    style={styles.input}
+                ></TextInput>
                 <TextInput
                     selectionColor={"#000"}
                     placeholder="E-mail"
                     inputMode="email"
-                    style={styles.input}></TextInput>
+                    style={styles.input}
+                ></TextInput>
                 <TextInput
                     selectionColor={"#000"}
                     placeholder="Password"
                     secureTextEntry={true}
-                    style={styles.input}></TextInput>
+                    style={styles.input}
+                ></TextInput>
                 <TextInput
                     selectionColor={"#000"}
                     placeholder="Re-Password"
                     secureTextEntry={true}
-                    style={styles.input}></TextInput>
+                    style={styles.input}
+                ></TextInput>
             </View>
 
             <Pressable style={styles.button}>
@@ -41,10 +45,7 @@ export default function SignIn({ navigation }) {
 
             <View style={styles.view}>
                 <Pressable style={[styles.thirdPart, { backgroundColor: "#fafafa" }]}>
-                    <Image
-                        style={styles.icon}
-                        source={require("../../assets/icons/google.png")}
-                    />
+                    <Image style={styles.icon} source={require("../../assets/icons/google.png")} />
                     <Text>Sign up with Google</Text>
                 </Pressable>
 
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
         padding: 16,
         alignItems: "center",
         backgroundColor: "#fff",
-        gap: 20
+        gap: 16
     },
     view: { gap: 12, width: "100%" },
     title: {
