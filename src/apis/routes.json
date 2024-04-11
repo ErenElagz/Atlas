@@ -1,0 +1,64 @@
+{
+    "routes": [
+        {
+            "origin": "Istanbul",
+            "destination": "Ankara",
+            "rating": 4.3,
+            "distance": 450
+        },
+        {
+            "origin": "Izmir",
+            "destination": "Antalya",
+            "rating": 4.6,
+            "distance": 483
+        },
+        {
+            "origin": "Ankara",
+            "destination": "Izmir",
+            "rating": 4.4,
+            "distance": 570
+        },
+        {
+            "origin": "Bursa",
+            "destination": "Adana",
+            "rating": 4.2,
+            "distance": 666
+        },
+        {
+            "origin": "Trabzon",
+            "destination": "Gaziantep",
+            "rating": 4.1,
+            "distance": 1100
+        },
+        {
+            "origin": "Konya",
+            "destination": "Samsun",
+            "rating": 4.5,
+            "distance": 640
+        },
+        {
+            "origin": "Mersin",
+            "destination": "Diyarbakir",
+            "rating": 4.3,
+            "distance": 905
+        },
+        {
+            "origin": "Kayseri",
+            "destination": "Van",
+            "rating": 4.0,
+            "distance": 1140
+        },
+        {
+            "origin": "Eskisehir",
+            "destination": "Denizli",
+            "rating": 4.4,
+            "distance": 510
+        },
+        {
+            "origin": "Antakya",
+            "destination": "Kars",
+            "rating": 4.2,
+            "distance": 1200
+        }
+    ]
+}

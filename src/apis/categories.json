@@ -2,31 +2,31 @@
     "categories": [
         {
             "name": "Ancient Cities",
-            "iconUrl": "https://example.com/icons/ancient_cities_icon.png"
+            "iconUrl": "https://www.svgrepo.com/show/525273/city.svg"
         },
         {
             "name": "Caves",
-            "iconUrl": "https://example.com/icons/caves_icon.png"
+            "iconUrl": "https://www.svgrepo.com/show/528597/signpost-2.svg"
         },
         {
             "name": "Beaches",
-            "iconUrl": "https://www.svgrepo.com/show/455135/beach-holiday.svg"
+            "iconUrl": "https://www.svgrepo.com/show/528705/sun-fog.svg"
         },
         {
             "name": "Museums",
-            "iconUrl": "https://www.svgrepo.com/show/490163/museum.svg"
+            "iconUrl": "https://www.svgrepo.com/show/527630/buildings-3.svg"
         },
         {
             "name": "National Parks",
-            "iconUrl": "https://example.com/icons/ancient_cities_icon.png"
+            "iconUrl": "https://www.svgrepo.com/show/527840/paw.svg"
         },
         {
             "name": "Camping",
-            "iconUrl": "https://example.com/icons/caves_icon.png"
+            "iconUrl": "https://www.svgrepo.com/show/528056/bonfire.svg"
         },
         {
             "name": "UNESCO Heritages",
-            "iconUrl": "https://example.com/icons/beaches_icon.png"
+            "iconUrl": "https://www.svgrepo.com/show/528224/earth.svg"
         }
     ]
 }
