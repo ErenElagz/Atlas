@@ -8,74 +8,60 @@ export default function SplashScreen({ navigation }) {
             <StatusBar style="auto" />
             <View>
                 <View style={styles.header}>
-                    <Image
-                        style={styles.logo}
-                        source={require("../assets/img/logo.png")}
-                    />
+                    <Image style={styles.logo} source={require("../assets/img/logo.png")} />
                     <Text style={styles.title}>Atlas</Text>
                 </View>
                 <Text style={styles.slogan}>AI Powered Route & Trip Planner</Text>
             </View>
 
-            <Image
-                style={styles.img}
-                source={require("../assets/img/splashscreen.png")}
-            />
+            <Image style={styles.img} source={require("../assets/img/splashscreen.png")} />
 
-            <View>
-                <View style={styles.sign}>
-                    <Pressable
-                        style={styles.sign2}
-                        onPress={() => navigation.navigate("SignIn")}>
-                        <Text style={styles.text2}>Sign In</Text>
-                    </Pressable>
-                    <Pressable
-                        style={styles.sign1}
-                        onPress={() => navigation.navigate("SignUp")}>
-                        <Text style={styles.text1}>Sign Up</Text>
-                    </Pressable>
-                </View>
-                <View style={styles.orView}>
-                    <View style={styles.div}></View>
-                    <Text style={styles.or}>or</Text>
-                    <View style={styles.div}></View>
-                </View>
-                <View style={styles.thirdView}>
-                    <Pressable style={styles.google}>
-                        <Image
-                            style={styles.logo2}
-                            source={require("../assets/icons/google.png")}
-                        />
-                        <Text style={styles.text1}>Login with Google</Text>
-                    </Pressable>
-                    <Pressable style={styles.facebook}>
-                        <Image
-                            style={styles.logo2}
-                            source={require("../assets/icons/facebook.png")}
-                        />
-                        <Text style={styles.text2}>Login with Facebook</Text>
-                    </Pressable>
-                    <Text
-                        style={{
-                            fontSize: 12,
-                            marginTop: 8,
-                            textAlign: "center",
-                            color: "#aaa"
-                        }}>
-                        When you logging in to the Atlas. You accepting Our Terms and Conditions
-                    </Text>
-                </View>
+            <View style={styles.buttonView}>
+                <Pressable
+                    style={[styles.button, { backgroundColor: "#323232" }]}
+                    onPress={() => navigation.navigate("SignIn")}
+                >
+                    <Text style={styles.buttonText}>Sign In</Text>
+                </Pressable>
+                <Pressable
+                    style={[styles.button, { backgroundColor: "#fafafa" }]}
+                    onPress={() => navigation.navigate("SignUp")}
+                >
+                    <Text style={[styles.buttonText, { color: "#000" }]}>Sign Up</Text>
+                </Pressable>
             </View>
+
+            <View style={styles.orView}>
+                <View style={styles.div}></View>
+                <Text style={styles.or}>or</Text>
+                <View style={styles.div}></View>
+            </View>
+
+            <View style={styles.view}>
+                <Pressable style={[styles.thirdPart, { backgroundColor: "#fafafa" }]}>
+                    <Image style={styles.icon} source={require("../assets/icons/google.png")} />
+                    <Text>Continue with Google</Text>
+                </Pressable>
+
+                <Pressable style={[styles.thirdPart, { backgroundColor: "#1877f2" }]}>
+                    <Image style={styles.icon} source={require("../assets/icons/facebook.png")} />
+                    <Text style={{ color: "#fff" }}>Continue with Facebook</Text>
+                </Pressable>
+            </View>
+
+            <Text style={[styles.slogan]}>
+                When you logging in to the Atlas. You accepting Our Terms and Conditions.
+            </Text>
         </View>
     );
 }
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 32,
+        padding: 16,
         alignItems: "center",
         backgroundColor: "#fff",
-        gap: 8
+        gap: 20
     },
     header: {
         flexDirection: "row",
@@ -87,60 +73,37 @@ const styles = StyleSheet.create({
     },
     title: { fontSize: 32, fontWeight: "700" },
     logo: { width: 32, height: 32 },
-    logo2: { width: 24, height: 24 },
-    slogan: { fontSize: 12, color: "#aaa", fontWeight: "500" },
+    slogan: { fontSize: 12, color: "#aaa", fontWeight: "500", textAlign: "center" },
     img: { width: Dimensions.get("window").width, height: Dimensions.get("window").width },
-    sign: { flexDirection: "row", padding: 16, width: "100%", gap: 8, alignSelf: "center" },
-    sign1: {
-        backgroundColor: "#fafafa",
-        alignItems: "center",
+    icon: { width: 20, height: 20 },
+    text: { fontSize: 14, width: "100%", textAlign: "center" },
+    
+    view: { gap: 12, width: "100%" },
+    thirdPart: {
         justifyContent: "center",
-        padding: 12,
+        padding: 16,
         borderRadius: 32,
-        flexGrow: 1
+        width: "100%",
+        flexDirection: "row",
+        gap: 16
     },
-    sign2: {
-        backgroundColor: "#323232",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 12,
-        borderRadius: 32,
-        flexGrow: 1
-    },
-    text1: { fontSize: 14, width: "100%", textAlign: "center" },
-    text2: { fontSize: 14, color: "#fff", width: "100%", textAlign: "center" },
-    or: { fontSize: 12, color: "#bbb" },
-    div: { flexGrow: 1, backgroundColor: "#eee", height: 1.5 },
-    thirdView: { paddingHorizontal: 24, alignItems: "center", gap: 8, paddingTop: 12 },
+
     orView: {
         flexDirection: "row",
-        paddingHorizontal: 48,
         alignItems: "center",
         gap: 16,
-        paddingVertical: 4
+        paddingHorizontal: 16
     },
-    google: {
-        backgroundColor: "#fafafa",
+    or: { fontSize: 12, color: "#bbb" },
+    div: { flexGrow: 1, backgroundColor: "#ddd", height: 1 },
+
+    buttonView: { gap: 8, flexDirection: "row" },
+    button: {
         alignItems: "center",
         justifyContent: "center",
         padding: 16,
         borderRadius: 32,
-        width: "100%",
-        flexDirection: "row",
-        paddingHorizontal: 32,
-        gap: 16,
-        textAlign: "center"
+        flexGrow: 1
     },
-    facebook: {
-        backgroundColor: "#1877F2",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 16,
-        borderRadius: 32,
-        width: "100%",
-        flexDirection: "row",
-        gap: 16,
-        textAlign: "center",
-        paddingHorizontal: 32
-    }
+    buttonText: { color: "#fff" }
 });
