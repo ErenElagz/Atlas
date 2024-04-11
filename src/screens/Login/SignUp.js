@@ -1,163 +1,94 @@
 import React from "react";
-import { View, StyleSheet, Text, Image, Dimensions, Pressable, TextInput } from "react-native";
+import { View, StyleSheet, Text, Image, Pressable, TextInput } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-export default function SignUp({ navigation }) {
+export default function SignIn({ navigation }) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
-            <View>
-                <View style={styles.header}>
-                    <Text style={styles.title}>Create an Account</Text>
-                </View>
+            <Text style={styles.title}>Create an Account</Text>
+            <View style={styles.view}>
+                <TextInput
+                    selectionColor={"#000"}
+                    placeholder="Username"
+                    style={styles.input}></TextInput>
+                <TextInput
+                    selectionColor={"#000"}
+                    placeholder="E-mail"
+                    style={styles.input}></TextInput>
+                <TextInput
+                    selectionColor={"#000"}
+                    placeholder="Password"
+                    style={styles.input}></TextInput>
+                <TextInput
+                    selectionColor={"#000"}
+                    placeholder="Re-Password"
+                    style={styles.input}></TextInput>
             </View>
 
-            <View>
-                <View style={{ paddingHorizontal: 32, marginTop: 32, gap: 8 }}>
-                    <TextInput placeholder="Username" style={styles.input} selectionColor={"#323232"}></TextInput>
-                    <TextInput placeholder="E-mail" style={styles.input} selectionColor={"#323232"}></TextInput>
-                    <TextInput placeholder="Password" style={styles.input} selectionColor={"#323232"}></TextInput>
-                    <TextInput placeholder="Re-Password" style={styles.input} selectionColor={"#323232"}></TextInput>
-                </View>
-                <View style={styles.sign}>
-                    <Pressable style={styles.sign2}>
-                        <Text style={styles.text2}>Sign Up</Text>
-                    </Pressable>
-                </View>
-                <View style={styles.orView}>
-                    <View style={styles.div}></View>
-                    <Text style={styles.or}>or</Text>
-                    <View style={styles.div}></View>
-                </View>
-                <View style={styles.thirdView}>
-                    <Pressable style={styles.google}>
-                        <Image style={styles.logo2} source={require("../../assets/icons/google.png")} />
-                        <Text style={styles.text1}>Sign up Google</Text>
-                    </Pressable>
-                    <Pressable style={styles.facebook}>
-                        <Image style={styles.logo2} source={require("../../assets/icons/facebook.png")} />
-                        <Text style={styles.text2}>Sign up Facebook</Text>
-                    </Pressable>
-                </View>
-                <Pressable onPress={() => navigation.navigate("SignIn")}>
-                    <Text
-                        style={{
-                            fontSize: 14,
-                            fontWeight: "600",
-                            textAlign: "center",
-                            marginTop: 24,
-                            color: "#969696",
-                            textDecorationLine: "underline"
-                        }}
-                    >
-                        Have an account? Sign In
-                    </Text>
+            <Pressable style={styles.button}>
+                <Text style={styles.buttonText}>Sign Up</Text>
+            </Pressable>
+
+            <View style={styles.orView}>
+                <View style={styles.div}></View>
+                <Text style={styles.or}>or</Text>
+                <View style={styles.div}></View>
+            </View>
+
+            <View style={styles.view}>
+                <Pressable style={[styles.thirdPart, { backgroundColor: "#fafafa" }]}>
+                    <Image
+                        style={styles.icon}
+                        source={require("../../assets/icons/google.png")}
+                    />
+                    <Text>Sign up Google</Text>
+                </Pressable>
+
+                <Pressable style={[styles.thirdPart, { backgroundColor: "#1877f2" }]}>
+                    <Image
+                        style={styles.icon}
+                        source={require("../../assets/icons/facebook.png")}
+                    />
+                    <Text style={{ color: "#fff" }}>Sign up Facebook</Text>
                 </Pressable>
             </View>
+
+            <Pressable onPress={() => navigation.navigate("SignIn")}>
+                <Text style={styles.text}>Already have an account?</Text>
+            </Pressable>
         </View>
     );
 }
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 32,
+        paddingTop: 64,
+        padding: 16,
         alignItems: "center",
         backgroundColor: "#fff",
-        gap: 8
+        gap: 20
     },
-    header: {
-        flexDirection: "row",
-        alignItems: "center",
-        paddingHorizontal: 16,
-        marginTop: 32,
-        gap: 4
-    },
+    view: { gap: 12, width: "100%" },
     title: {
         fontSize: 32,
-        fontWeight: "700"
+        fontWeight: "800",
+        color: "#323232"
     },
-    logo: {
-        width: 32,
-        height: 32
+    icon: {
+        width: 20,
+        height: 20
     },
-    logo2: {
-        width: 24,
-        height: 24
-    },
-    slogan: {
-        fontSize: 14,
-        color: "#aaa"
-    },
-    img: {
-        width: Dimensions.get("window").width,
-        height: Dimensions.get("window").width,
-        aspectRatio: "1/1"
-    },
-    button: {},
-    sign: {
-        flexDirection: "row",
-        padding: 20,
-        width: "100%",
-        gap: 8,
-        alignSelf: "center"
-    },
-    sign2: {
+    button: {
         backgroundColor: "#323232",
         alignItems: "center",
         justifyContent: "center",
         padding: 16,
         borderRadius: 32,
-        flexGrow: 1
+        width: "100%"
     },
-    text1: {
-        fontSize: 14,
-        width: "100%",
-        textAlign: "center"
-    },
-    text2: {
-        fontSize: 14,
-        color: "#fff",
-        width: "100%",
-        textAlign: "center"
-    },
-    orView: {
-        flexDirection: "row",
-        paddingHorizontal: 48,
-        alignItems: "center",
-        gap: 16,
-        paddingVertical: 4
-    },
-    or: { fontSize: 12, color: "#bbb" },
-    div: { flexGrow: 1, backgroundColor: "#eee", height: 1.5 },
-    google: {
-        backgroundColor: "#fafafa",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 16,
-        borderRadius: 32,
-        width: "100%",
-        flexDirection: "row",
-        paddingHorizontal: 32,
-        gap: 16,
-        textAlign: "center"
-    },
-    facebook: {
-        backgroundColor: "#1877F2",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 16,
-        borderRadius: 32,
-        width: "100%",
-        flexDirection: "row",
-        gap: 16,
-        textAlign: "center",
-        paddingHorizontal: 32
-    },
-    thirdView: {
-        paddingHorizontal: 24,
-        alignItems: "center",
-        gap: 8,
-        paddingTop: 12
+    buttonText: {
+        color: "#fff"
     },
     input: {
         backgroundColor: "#fafafa",
@@ -166,5 +97,27 @@ const styles = StyleSheet.create({
         paddingVertical: 14,
         paddingHorizontal: 20,
         borderRadius: 12
+    },
+    orView: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 16,
+        paddingHorizontal: 16
+    },
+    or: { fontSize: 12, color: "#bbb" },
+    div: { flexGrow: 1, backgroundColor: "#ddd", height: 1 },
+    thirdPart: {
+        justifyContent: "center",
+        padding: 16,
+        borderRadius: 32,
+        width: "100%",
+        flexDirection: "row",
+        gap: 16
+    },
+    text: {
+        fontSize: 14,
+        fontWeight: "600",
+        color: "#969696",
+        textDecorationLine: "underline"
     }
 });

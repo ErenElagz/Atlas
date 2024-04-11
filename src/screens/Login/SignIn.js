@@ -9,10 +9,12 @@ export default function SignIn({ navigation }) {
             <Text style={styles.title}>Login to Atlas</Text>
             <View style={styles.view}>
                 <TextInput
+                    selectionColor={"#000"}
                     placeholder="E-mail"
                     style={styles.input}></TextInput>
 
                 <TextInput
+                    selectionColor={"#000"}
                     placeholder="Password"
                     style={styles.input}></TextInput>
             </View>
@@ -22,7 +24,7 @@ export default function SignIn({ navigation }) {
                 style={{ width: "100%", alignItems: "flex-end" }}>
                 <Text style={styles.text}>Forgot Password</Text>
             </Pressable>
-            
+
             <Pressable style={styles.button}>
                 <Text style={styles.buttonText}>Sign In</Text>
             </Pressable>
@@ -34,7 +36,7 @@ export default function SignIn({ navigation }) {
             </View>
 
             <View style={styles.view}>
-                <Pressable style={styles.google}>
+                <Pressable style={[styles.thirdPart, { backgroundColor: "#fafafa" }]}>
                     <Image
                         style={styles.icon}
                         source={require("../../assets/icons/google.png")}
@@ -42,7 +44,7 @@ export default function SignIn({ navigation }) {
                     <Text>Sign in Google</Text>
                 </Pressable>
 
-                <Pressable style={styles.facebook}>
+                <Pressable style={[styles.thirdPart, { backgroundColor: "#1877f2" }]}>
                     <Image
                         style={styles.icon}
                         source={require("../../assets/icons/facebook.png")}
@@ -103,17 +105,7 @@ const styles = StyleSheet.create({
     },
     or: { fontSize: 12, color: "#bbb" },
     div: { flexGrow: 1, backgroundColor: "#ddd", height: 1 },
-    google: {
-        backgroundColor: "#fafafa",
-        justifyContent: "center",
-        padding: 16,
-        borderRadius: 32,
-        width: "100%",
-        flexDirection: "row",
-        gap: 16
-    },
-    facebook: {
-        backgroundColor: "#1877F2",
+    thirdPart: {
         justifyContent: "center",
         padding: 16,
         borderRadius: 32,

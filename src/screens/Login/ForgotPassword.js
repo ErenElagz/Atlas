@@ -7,12 +7,16 @@ export default function ForgotPassword({ navigation }) {
         <View style={styles.container}>
             <StatusBar style="auto" />
             <Text style={styles.title}>Forgot Password</Text>
+            
             <TextInput
+                selectionColor={"#000"}
                 placeholder="E-mail"
                 style={styles.input}></TextInput>
+
             <Pressable style={styles.button}>
                 <Text style={styles.buttonText}>Send Email</Text>
             </Pressable>
+
             <Pressable onPress={() => navigation.navigate("SignIn")}>
                 <Text style={styles.goBack}>Go Back</Text>
             </Pressable>
