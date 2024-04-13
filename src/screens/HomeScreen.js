@@ -6,7 +6,8 @@ import {
     Text,
     TextInput,
     TouchableOpacity,
-    ScrollView
+    ScrollView,
+    Dimensions
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Categories from "../apis/categories.json";
@@ -18,7 +19,7 @@ export default function HomeScreen() {
     const route = Routes.routes;
 
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container} showsHorizontalScrollIndicator={false}>
             <StatusBar style="auto" />
             <View style={styles.header}>
                 <View style={styles.topBar}>
@@ -41,7 +42,7 @@ export default function HomeScreen() {
                     />
                 </View>
             </View>
-            <View style={{ gap: 8 }}>
+            <View style={{ gap: 8, marginTop: 16, }}>
                 <View style={styles.searchBar}>
                     <TextInput
                         placeholder="Search City, route and more..."
@@ -70,8 +71,8 @@ export default function HomeScreen() {
                     </ScrollView>
                 </View>
             </View>
-            <View style={{ marginTop: 24, gap: 8 }}>
-                <View style={{ flexDirection: "row", gap: 8 }}>
+            <View style={{ marginTop: 32, gap: 8 }}>
+                <View style={{ flexDirection: "row", gap: 8, paddingHorizontal: 16,}}>
                     <SvgUri
                         width={42}
                         height={42}
@@ -85,13 +86,17 @@ export default function HomeScreen() {
                     </View>
                 </View>
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                    <View style={{ flexDirection: "row", gap: 8 }}>
+                    <View style={{ flexDirection: "row", gap: 8, paddingLeft:16}}>
                         {route.map((route, index) => (
                             <TouchableOpacity key={index}>
                                 <View style={styles.gallery}>
                                     <View>
                                         <Image
-                                            style={{ width: 200, height: 200, borderRadius: 16 }}
+                                            style={{
+                                                width: 200,
+                                                height: 200,
+                                                borderRadius: 16
+                                            }}
                                             source={require("../assets/img/img.jpg")}
                                         />
                                     </View>
@@ -168,18 +173,20 @@ export default function HomeScreen() {
                     </View>
                 </ScrollView>
             </View>
-        </View>
+        </ScrollView>
     );
 }
 const styles = StyleSheet.create({
-    container: { flex: 1, gap: 16, paddingTop: 48, paddingHorizontal: 16, overflow: "visible" },
+    container: { flex: 1, gap: 16, paddingTop: 48, overflow: "visible" },
     topBar: { flexDirection: "row", alignItems: "center", gap: 2 },
     header: {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        paddingHorizontal: 8
+        paddingHorizontal: 8,
+        paddingHorizontal: 16
     },
+
     icon: { width: 24, height: 24 },
     text: { fontSize: 14, fontWeight: "600" },
     text2: { fontSize: 12, fontWeight: "600" },
@@ -188,7 +195,7 @@ const styles = StyleSheet.create({
         borderColor: "#eee",
         borderRadius: 20,
         overflow: "hidden",
-        paddingBottom: 16
+        paddingBottom: 16,
     },
     logo: { width: 32, height: 32 },
     title: { fontSize: 32, fontWeight: "800" },
@@ -200,9 +207,9 @@ const styles = StyleSheet.create({
         padding: 16,
         paddingHorizontal: 20,
         gap: 8,
-        borderRadius: 24
+        borderRadius: 24,marginHorizontal:16
     },
-    categoriesBar: { flexDirection: "row", gap: 8 },
+    categoriesBar: { flexDirection: "row", gap: 8,paddingLeft:16 },
     category: {
         backgroundColor: "#fafafa",
         paddingVertical: 12,
