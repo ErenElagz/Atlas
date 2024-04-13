@@ -26,7 +26,7 @@ export default function HomeScreen() {
                     <Image style={styles.logo} source={require("../assets/img/logo.png")} />
                     <Text style={styles.title}>Atlas</Text>
                 </View>
-                <View
+                <TouchableOpacity
                     style={{
                         backgroundColor: "#f5f5f5",
                         width: 48,
@@ -40,7 +40,7 @@ export default function HomeScreen() {
                         style={{ width: "100%", height: "100%" }}
                         source={require("../assets/img/pp.jpg")}
                     />
-                </View>
+                </TouchableOpacity>
             </View>
             <View style={{ gap: 8, marginTop: 16, }}>
                 <View style={styles.searchBar}>
@@ -72,11 +72,11 @@ export default function HomeScreen() {
                 </View>
             </View>
             <View style={{ marginTop: 32, gap: 8 }}>
-                <View style={{ flexDirection: "row", gap: 8, paddingHorizontal: 16,}}>
+                <View style={{ flexDirection: "row", gap: 4, paddingHorizontal: 16,alignItems:"center"}}>
                     <SvgUri
-                        width={42}
-                        height={42}
-                        uri={"https://www.svgrepo.com/show/528562/route.svg/"}
+                        width={36}
+                        height={36}
+                        uri={"https://www.svgrepo.com/show/526192/route.svg"}
                     />
                     <View>
                         <Text style={{ fontSize: 20, fontWeight: "700" }}>Popular Routes</Text>
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         paddingHorizontal: 8,
-        paddingHorizontal: 16
+        paddingHorizontal: 20
     },
 
     icon: { width: 24, height: 24 },
