@@ -316,7 +316,7 @@ const styles = StyleSheet.create({
         paddingBottom: 16
     },
     logo: { width: 32, height: 32 },
-    title: { fontSize: 32, fontWeight: "800" },
+    title: { fontSize: 32, fontWeight: "800", fontFamily: "CalSans-SemiBold" },
     input: { flex: 1, fontSize: 14 },
     searchBar: {
         backgroundColor: "#fafafa",
