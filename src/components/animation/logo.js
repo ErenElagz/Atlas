@@ -7,8 +7,8 @@ export default function AnimatedSvg() {
     const dashOffset2 = useRef(new Animated.Value(1653.445556640625)).current;
 
     useEffect(() => {
-        animateDashOffset(dashOffset1, 0, 1000, 0);
-        animateDashOffset(dashOffset2, 0, 1250, 100);
+        animateDashOffset(dashOffset1, 0, 750, 0);
+        animateDashOffset(dashOffset2, 0, 1000, 100);
     }, []);
 
     const animateDashOffset = (offset, toValue, duration, delay) => {
