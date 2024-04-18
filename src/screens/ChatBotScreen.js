@@ -17,11 +17,8 @@ export default function App() {
             <StatusBar style="auto" />
 
             <View style={styles.header}>
-                <Image
-                    style={styles.logo}
-                    source={require("../assets/img/logo.png")}
-                />
-                <Text style={styles.title}>Atlas AI</Text>
+                <Image style={styles.logo} source={require("../assets/img/logo.png")} />
+                <Text style={styles.title}>Atlas Assistant</Text>
             </View>
 
             <FlatList
@@ -42,7 +39,8 @@ export default function App() {
                     style={styles.input}
                     value={inputText}
                     onChangeText={text => setInputText(text)}
-                    selectionColor={"#323232"}></TextInput>
+                    selectionColor={"#323232"}
+                ></TextInput>
                 <TouchableOpacity onPress={SearchInput}>
                     <Image
                         source={require("../assets/icons/right-arrow.png")}
@@ -56,9 +54,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
     container: { flex: 1, gap: 16, paddingTop: 48 },
-    header: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, gap: 8 },
-    title: { fontSize: 24, fontWeight: "700" },
-    logo: { width: 24, height: 24 },
+    header: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, gap: 4 },
+    title: { fontSize: 24, fontWeight: "800", color: "#323232" },
+    logo: { width: 28, height: 28 },
     icon: { width: 24, height: 24 },
     input: { flex: 1, fontSize: 14 },
     searchBar: {
