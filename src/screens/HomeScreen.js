@@ -11,14 +11,16 @@ import {
 import { StatusBar } from "expo-status-bar";
 import PopularRoutes from "../components/home/PopularRoutes";
 import Categories from "../components/home/Categories";
+import AnimatedSVG from "../components/animation/svg";
 export default function HomeScreen() {
-
     return (
         <ScrollView style={styles.container} showsHorizontalScrollIndicator={false}>
             <StatusBar style="auto" backgroundColor="#fff" />
             <View style={styles.header}>
                 <View style={styles.topBar}>
-                    <Image style={styles.logo} source={require("../assets/img/logo.png")} />
+                    <View style={styles.logo}>
+                        <AnimatedSVG />
+                    </View>
                     <Text style={styles.title}>Atlas</Text>
                 </View>
                 <TouchableOpacity
@@ -49,10 +51,10 @@ export default function HomeScreen() {
                     </TouchableOpacity>
                 </View>
                 <View>
-                    <Categories/>
+                    <Categories />
                 </View>
             </View>
-            <PopularRoutes/>
+            <PopularRoutes />
         </ScrollView>
     );
 }
@@ -65,12 +67,10 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         paddingHorizontal: 20
     },
-
-    icon: { width: 24, height: 24 },
-    text: { fontSize: 14, fontWeight: "600" },
-    text2: { fontSize: 12, fontWeight: "600" },
-    logo: { width: 32, height: 32 },
     title: { fontSize: 32, fontWeight: "800", fontFamily: "CalSans-SemiBold" },
+    icon: { width: 24, height: 24 },
+    logo: { width: 32, height: 32 },
+
     input: { flex: 1, fontSize: 14 },
     searchBar: {
         backgroundColor: "#fff",
@@ -80,7 +80,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         gap: 8,
         borderRadius: 24,
-        marginHorizontal: 16,        borderWidth: 1,borderColor:"#efefef"
-
-    },
+        marginHorizontal: 16,
+        borderWidth: 1,
+        borderColor: "#efefef"
+    }
 });
