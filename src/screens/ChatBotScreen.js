@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, FlatList, TextInput, TouchableOpacity } from "react-native";
 import Response from "../components/chatbot/response";
 import Message from "../components/chatbot/message";
+import AnimatedSVG from "../components/animation/logo";
 
 export default function App() {
     const [inputText, setInputText] = useState("");
@@ -17,8 +18,8 @@ export default function App() {
             <StatusBar style="auto" />
 
             <View style={styles.header}>
-                <Image style={styles.logo} source={require("../assets/img/logo.png")} />
-                <Text style={styles.title}>Atlas Assistant</Text>
+                <AnimatedSVG />
+                <Text style={styles.title}>Atlas Chat</Text>
             </View>
 
             <FlatList

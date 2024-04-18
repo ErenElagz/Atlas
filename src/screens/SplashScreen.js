@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text, Image, Dimensions, Pressable } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import AnimatedSVG from "../components/animation/logo";
 
 export default function SplashScreen({ navigation }) {
     return (
@@ -8,7 +9,7 @@ export default function SplashScreen({ navigation }) {
             <StatusBar style="auto" />
             <View>
                 <View style={styles.header}>
-                    <Image style={styles.logo} source={require("../assets/img/logo.png")} />
+                <AnimatedSVG />
                     <Text style={styles.title}>Atlas</Text>
                 </View>
                 <Text style={styles.slogan}>AI Powered Route & Trip Planner</Text>

@@ -11,7 +11,7 @@ import {
 import { StatusBar } from "expo-status-bar";
 import PopularRoutes from "../components/home/PopularRoutes";
 import Categories from "../components/home/Categories";
-import AnimatedSVG from "../components/animation/svg";
+import AnimatedSVG from "../components/animation/logo";
 export default function HomeScreen() {
     return (
         <ScrollView style={styles.container} showsHorizontalScrollIndicator={false}>
