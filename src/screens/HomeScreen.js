@@ -12,7 +12,7 @@ import { StatusBar } from "expo-status-bar";
 import PopularRoutes from "../components/home/PopularRoutes";
 import Categories from "../components/home/Categories";
 import AnimatedSVG from "../components/animation/logo";
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
     return (
         <ScrollView style={styles.container} showsHorizontalScrollIndicator={false}>
             <StatusBar style="auto" backgroundColor="#fff" />
@@ -24,6 +24,7 @@ export default function HomeScreen() {
                     <Text style={styles.title}>Atlas</Text>
                 </View>
                 <TouchableOpacity
+                    onPress={() => navigation.navigate("ProfileScreen")}
                     style={{
                         backgroundColor: "#f5f5f5",
                         width: 48,
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         paddingHorizontal: 20
     },
-    title: { fontSize: 32, fontWeight: "800", fontFamily: "CalSans-SemiBold" },
+    title: { fontSize: 30, fontWeight: "800" },
     icon: { width: 24, height: 24 },
     logo: { width: 32, height: 32 },
 
