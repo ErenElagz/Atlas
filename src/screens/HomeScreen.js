@@ -48,7 +48,7 @@ export default function HomeScreen({ navigation }) {
                         selectionColor={"#323232"}
                     ></TextInput>
                     <TouchableOpacity>
-                        <Image source={require("../assets/icons/search.png")} style={styles.icon} />
+                        <Image source={require("../assets/icons/right-arrow.png")} style={styles.icon} />
                     </TouchableOpacity>
                 </View>
                 <View>

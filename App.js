@@ -14,49 +14,37 @@ import SignIn from "./src/screens/Login/SignIn";
 import SignUp from "./src/screens/Login/SignUp";
 import ForgotPassword from "./src/screens/Login/ForgotPassword";
 import HomeScreen from "./src/screens/HomeScreen";
+import CreateRoute from "./src/screens/CreateRoute";
 
 function Home({ navigation }) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
-            <Pressable
-                style={styles.button}
-                onPress={() => navigation.navigate("HomeScreen")}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("HomeScreen")}>
                 <Text>Home Screen</Text>
             </Pressable>
-            <Pressable
-                style={styles.button}
-                onPress={() => navigation.navigate("Map")}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("Map")}>
                 <Text>Maps</Text>
             </Pressable>
-            <Pressable
-                style={styles.button}
-                onPress={() => navigation.navigate("ChatBotScreen")}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("ChatBotScreen")}>
                 <Text>ChatBot</Text>
             </Pressable>
-            <Pressable
-                style={styles.button}
-                onPress={() => navigation.navigate("ProfileScreen")}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("CreateRoute")}>
+                <Text>CreateRoute</Text>
+            </Pressable>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("ProfileScreen")}>
                 <Text>Profile</Text>
             </Pressable>
-            <Pressable
-                style={styles.button}
-                onPress={() => navigation.navigate("SplashScreen")}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("SplashScreen")}>
                 <Text>Splash</Text>
             </Pressable>
-            <Pressable
-                style={styles.button}
-                onPress={() => navigation.navigate("SignIn")}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("SignIn")}>
                 <Text>Sign In</Text>
             </Pressable>
-            <Pressable
-                style={styles.button}
-                onPress={() => navigation.navigate("SignUp")}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("SignUp")}>
                 <Text>Sign Up</Text>
             </Pressable>
-            <Pressable
-                style={styles.button}
-                onPress={() => navigation.navigate("ForgotPassword")}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("ForgotPassword")}>
                 <Text>Forgot Password</Text>
             </Pressable>
         </View>
@@ -71,44 +59,19 @@ export default function App() {
                 colors: {
                     background: "transparent"
                 }
-            }}>
+            }}
+        >
             <Stack.Navigator screenOptions={{ headerShown: false }}>
-                <Stack.Screen
-                    name="Atlas AI"
-                    component={Home}
-                />
-                <Stack.Screen
-                    name="Map"
-                    component={MapScreen}
-                />
-                <Stack.Screen
-                    name="ProfileScreen"
-                    component={ProfileScreen}
-                />
-                <Stack.Screen
-                    name="ChatBotScreen"
-                    component={ChatBotScreen}
-                />
-                <Stack.Screen
-                    name="SplashScreen"
-                    component={SplashScreen}
-                />
-                <Stack.Screen
-                    name="SignIn"
-                    component={SignIn}
-                />
-                <Stack.Screen
-                    name="SignUp"
-                    component={SignUp}
-                />
-                <Stack.Screen
-                    name="ForgotPassword"
-                    component={ForgotPassword}
-                />
-                <Stack.Screen
-                    name="HomeScreen"
-                    component={HomeScreen}
-                />
+                <Stack.Screen name="Atlas AI" component={Home} />
+                <Stack.Screen name="Map" component={MapScreen} />
+                <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+                <Stack.Screen name="ChatBotScreen" component={ChatBotScreen} />
+                <Stack.Screen name="SplashScreen" component={SplashScreen} />
+                <Stack.Screen name="SignIn" component={SignIn} />
+                <Stack.Screen name="SignUp" component={SignUp} />
+                <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+                <Stack.Screen name="HomeScreen" component={HomeScreen} />
+                <Stack.Screen name="CreateRoute" component={CreateRoute} />
             </Stack.Navigator>
         </NavigationContainer>
     );
