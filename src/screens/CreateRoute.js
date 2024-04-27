@@ -79,11 +79,11 @@ export default function CreateRoute() {
                             renderItem={({ item }) => (
                                 <View style={styles.highlight} key={item}>
                                     <Text style={{ fontSize: 12 }}>{item}</Text>
-                                    <TouchableOpacity onPress={""}>
+                                    <TouchableOpacity>
                                         <Image
                                             source={require("../assets/icons/close.png")}
                                             style={{ width: 12, height: 12 }}
-                                            />
+                                        />
                                     </TouchableOpacity>
                                 </View>
                             )}
@@ -109,7 +109,7 @@ export default function CreateRoute() {
                                 onChangeText={text => setPlaceLongtitude(text)}
                             ></TextInput>
                         </View>
-                        <View style={{ borderRadius: 12, overflow: "" }}>
+                        <View style={{ borderRadius: 12 }}>
                             <MapView
                                 customMapStyle={MapViewStyle}
                                 style={styles.map}
