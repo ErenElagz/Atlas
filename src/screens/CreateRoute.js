@@ -51,7 +51,6 @@ export default function CreateRoute() {
                         <View style={styles.searchBar}>
                             <TextInput
                                 style={styles.input}
-                                numberOfLines={5}
                                 value={placeDescription}
                                 onChangeText={text => setPlaceDescription(text)}
                             ></TextInput>
