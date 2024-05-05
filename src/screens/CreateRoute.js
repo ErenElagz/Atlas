@@ -1,15 +1,5 @@
 import React, { useState } from "react";
-import {
-    View,
-    Pressable,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    Image,
-    StyleSheet,
-    ScrollView,
-    FlatList
-} from "react-native";
+import { View, Pressable, Text, TextInput, TouchableOpacity, Image, StyleSheet, ScrollView, FlatList } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import AnimatedSVG from "../components/animation/logo";
 import MapView, { Marker } from "react-native-maps";
@@ -41,33 +31,17 @@ export default function CreateRoute() {
                     <View style={styles.container2}>
                         <Text style={styles.title2}>Title</Text>
                         <View style={styles.searchBar}>
-                            <TextInput
-                                style={styles.input}
-                                value={placeName}
-                                onChangeText={text => setPlaceName(text)}
-                            ></TextInput>
+                            <TextInput style={styles.input} value={placeName} onChangeText={text => setPlaceName(text)}></TextInput>
                         </View>
                         <Text style={styles.title2}>Description</Text>
                         <View style={styles.searchBar}>
-                            <TextInput
-                                style={styles.input}
-                                value={placeDescription}
-                                onChangeText={text => setPlaceDescription(text)}
-                            ></TextInput>
+                            <TextInput style={styles.input} value={placeDescription} onChangeText={text => setPlaceDescription(text)}></TextInput>
                         </View>
                         <Text style={styles.title2}>Highlights</Text>
                         <View style={styles.searchBar}>
-                            <TextInput
-                                placeholder="Add Keyword"
-                                style={styles.input}
-                                value={highlightText}
-                                onChangeText={setHighlightText}
-                            ></TextInput>
+                            <TextInput placeholder="Add Keyword" style={styles.input} value={highlightText} onChangeText={setHighlightText}></TextInput>
                             <TouchableOpacity onPress={Add}>
-                                <Image
-                                    source={require("../assets/icons/right-arrow.png")}
-                                    style={styles.icon}
-                                />
+                                <Image source={require("../assets/icons/right-arrow.png")} style={styles.icon} />
                             </TouchableOpacity>
                         </View>
                         <FlatList
@@ -79,10 +53,7 @@ export default function CreateRoute() {
                                 <View style={styles.highlight} key={item}>
                                     <Text style={{ fontSize: 12 }}>{item}</Text>
                                     <TouchableOpacity>
-                                        <Image
-                                            source={require("../assets/icons/close.png")}
-                                            style={{ width: 12, height: 12 }}
-                                        />
+                                        <Image source={require("../assets/icons/close.png")} style={{ width: 12, height: 12 }} />
                                     </TouchableOpacity>
                                 </View>
                             )}
@@ -92,21 +63,11 @@ export default function CreateRoute() {
                     <View style={styles.container2}>
                         <Text style={styles.title2}>Latitude</Text>
                         <View style={styles.searchBar}>
-                            <TextInput
-                                style={styles.input}
-                                inputMode="decimal"
-                                value={placeLatitude}
-                                onChangeText={text => setPlaceLatitude(text)}
-                            ></TextInput>
+                            <TextInput style={styles.input} inputMode="decimal" value={placeLatitude} onChangeText={text => setPlaceLatitude(text)}></TextInput>
                         </View>
                         <Text style={styles.title2}>Longtitude</Text>
                         <View style={styles.searchBar}>
-                            <TextInput
-                                style={styles.input}
-                                inputMode="decimal"
-                                value={placeLongtitude}
-                                onChangeText={text => setPlaceLongtitude(text)}
-                            ></TextInput>
+                            <TextInput style={styles.input} inputMode="decimal" value={placeLongtitude} onChangeText={text => setPlaceLongtitude(text)}></TextInput>
                         </View>
                         <View style={{ borderRadius: 12 }}>
                             <MapView
