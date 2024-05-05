@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "left",
         justifyContent: "center",
-        gap: 16,
+        gap: 12,
         margin: 16,
         paddingTop: 16
     },
