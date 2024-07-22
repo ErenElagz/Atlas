@@ -1,13 +1,5 @@
 import React from "react";
-import {
-    View,
-    StyleSheet,
-    Image,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    ScrollView
-} from "react-native";
+import { View, StyleSheet, Image, Text, TextInput, TouchableOpacity, ScrollView } from "react-native";
 import Routes from "../../apis/routes.json";
 import { SvgUri } from "react-native-svg";
 
@@ -24,16 +16,10 @@ export default function PopularRoutes() {
                     alignItems: "center"
                 }}
             >
-                <SvgUri
-                    width={36}
-                    height={36}
-                    uri={"https://www.svgrepo.com/show/528562/route.svg"}
-                />
+                <SvgUri width={36} height={36} uri={"https://www.svgrepo.com/show/528562/route.svg"} />
                 <View>
                     <Text style={{ fontSize: 20, fontWeight: "700" }}>Popular Routes</Text>
-                    <Text style={{ fontSize: 12, fontWeight: "500" }}>
-                        Recommended Routes in the Community
-                    </Text>
+                    <Text style={{ fontSize: 12, fontWeight: "500" }}>Recommended Routes in the Community</Text>
                 </View>
             </View>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -61,14 +47,7 @@ export default function PopularRoutes() {
                                         }}
                                     >
                                         <Text style={styles.text}>{route["origin"]}</Text>
-                                        <SvgUri
-                                            width={20}
-                                            height={20}
-                                            opacity={0.75}
-                                            uri={
-                                                "https://www.svgrepo.com/show/528381/map-arrow-right.svg"
-                                            }
-                                        />
+                                        <SvgUri width={20} height={20} opacity={0.75} uri={"https://www.svgrepo.com/show/528381/map-arrow-right.svg"} />
                                         <Text style={styles.text}>{route["destination"]}</Text>
                                     </View>
                                     <View
@@ -86,14 +65,7 @@ export default function PopularRoutes() {
                                                 marginTop: 8
                                             }}
                                         >
-                                            <SvgUri
-                                                width={24}
-                                                height={24}
-                                                opacity={0.75}
-                                                uri={
-                                                    "https://www.svgrepo.com/show/528597/signpost-2.svg"
-                                                }
-                                            />
+                                            <SvgUri width={24} height={24} opacity={0.75} uri={"https://www.svgrepo.com/show/528597/signpost-2.svg"} />
                                             <Text style={styles.text2}>
                                                 {route["distance"]}
                                                 <Text> Km</Text>
@@ -106,12 +78,7 @@ export default function PopularRoutes() {
                                                 marginTop: 8
                                             }}
                                         >
-                                            <SvgUri
-                                                width={24}
-                                                height={24}
-                                                opacity={0.75}
-                                                uri={"https://www.svgrepo.com/show/527909/star.svg"}
-                                            />
+                                            <SvgUri width={24} height={24} opacity={0.75} uri={"https://www.svgrepo.com/show/527909/star.svg"} />
                                             <Text style={styles.text2}>{route["rating"]}</Text>
                                         </View>
                                     </View>
@@ -134,5 +101,5 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         overflow: "hidden",
         paddingBottom: 16
-    },
+    }
 });
